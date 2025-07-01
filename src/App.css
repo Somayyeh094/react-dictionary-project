@@ -1,5 +1,29 @@
 .App {
   text-align: center;
+  background:linear-gradient(0deg, rgb(247, 247, 247) 23.8%, rgb(252, 221, 221) 92%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin:0;
+  padding: 0;
 }
-
+.dark{
+  background: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
+}
+.change-theme{
+  background: none;
+  border: 1px solid gainsboro;
+  border-radius: 10px;
+  margin-top: 5px;
+ margin-right: 20px;
+  float: right;
+  cursor: pointer;
+}
+.sun-color, .moon-color{
+width: 40px;
+}
+.hidden{
+  display: none;
+}
 
