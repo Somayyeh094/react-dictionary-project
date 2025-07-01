@@ -40,12 +40,14 @@ function App() {
           />
         </button>
       </header>
-      <form onSubmit={getApi} className="text-center">
-        <input type="search" placeholder="Search a word" onChange={getWord} />
-        <button>
-          <img src={magnifier} width="25" alt="search icon" />
-        </button>
-      </form>
+      <div className="form-control">
+        <form onSubmit={getApi} className="text-center">
+          <input type="search" placeholder="Search a word" onChange={getWord} required />
+          <button typ="submit" className="search-button">
+            <img src={magnifier} alt="search icon" width="35%" />
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

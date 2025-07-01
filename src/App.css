@@ -1,60 +1,85 @@
 .App {
-  background:linear-gradient(0deg, rgb(247, 247, 247) 23.8%, rgb(252, 221, 221) 92%);
+  background: linear-gradient(
+    0deg,
+    rgb(247, 247, 247) 23.8%,
+    rgb(252, 221, 221) 92%
+  );
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
-  margin:0 auto;
+  margin: 0 auto;
   padding: 0;
 }
-.dark{
-  background: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
+.dark {
+  background: linear-gradient(
+    to top,
+    #0c3483 0%,
+    #a2b6df 100%,
+    #6b8cce 100%,
+    #a2b6df 100%
+  );
 }
-.change-theme{
- 
+header {
+  display: flex;
+  justify-content: flex-end;
+}
+.change-theme {
   background: none;
   border: 1px solid gainsboro;
   border-radius: 10px;
- margin-top:5px; 
+  margin-top: 5px;
   cursor: pointer;
+  margin-right: 10px;
 }
-.sun-color, .moon-color{
-width: 40px;
+.sun-color,
+.moon-color {
+  width: 40px;
 }
-.hidden{
+.hidden {
   display: none;
 }
-form{
+.form-control{
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+}
+form {
   margin-top: 20px;
   text-align: center;
-  
-}
-
-input{
- 
-  font-size: 18px;
-  letter-spacing: 2px;
   border: 2px solid gainsboro;
   border-radius: 50px;
-  padding: 20px;
+  padding: 5px;
+  width: 40%;
+  background: white;
+  display: flex;
+  justify-content: space-between;
 }
 
-input:focus {
-  outline: none;
+input {
+ border: 1px  solid transparent;
+  font-size: 18px;
+  letter-spacing: 2px;
+background: transparent;
+ width: 80%;
+ border-radius: 50px;
+ padding: 10px;
+ margin: 0;
+}
+.search-button{
+  background:transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
 }
 
-/* Add the focus effect to the form so it contains the button */
-form:focus-within { 
-  outline: 1px solid blue 
-}
 
-
-
-@media(max-width:720px){
-  input{
+@media (max-width: 720px) {
+  form{
+    width:80%;
+  }
+  /* input {
     width: 80vw;
     font-size: 14px;
-  }
+  } */
 }
