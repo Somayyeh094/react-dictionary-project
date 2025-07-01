@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./App.css";
 import sunIcon from "./sunIcon.svg";
 import moonIcon from "./moonIcon.svg";
@@ -12,7 +12,9 @@ function App() {
     document.querySelector(".moon-color").classList.toggle("hidden");
     document.querySelector(".sun-color").classList.toggle("hidden");
   }
-  function getResponse(response) {}
+  function getResponse(response) {
+    console.log(response.data);
+  }
   function getApi(event) {
     event.preventDefault();
     axios
@@ -42,7 +44,12 @@ function App() {
       </header>
       <div className="form-control">
         <form onSubmit={getApi} className="text-center">
-          <input type="search" placeholder="Search a word" onChange={getWord} required />
+          <input
+            type="search"
+            placeholder="Search a word"
+            onChange={getWord}
+            required
+          />
           <button typ="submit" className="search-button">
             <img src={magnifier} alt="search icon" width="35%" />
           </button>
