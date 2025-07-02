@@ -8,8 +8,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
-  margin: 0 auto;
-  padding: 0;
 }
 .dark {
   background: linear-gradient(
@@ -39,44 +37,7 @@ header {
 .hidden {
   display: none;
 }
-.form-control{
-  display: flex;
-  justify-content: center;
-}
-form {
-  margin-top: 20px;
-  text-align: center;
-  border: 2px solid gainsboro;
-  border-radius: 50px;
-  padding: 5px;
-  width: 40%;
-  background: white;
-  display: flex;
-  justify-content: space-between;
-}
 
-input {
- border: 1px  solid transparent;
-  font-size: 18px;
-  letter-spacing: 2px;
-background: transparent;
- width: 80%;
- border-radius: 50px;
- padding: 10px;
- margin: 0;
-}
-.search-button{
-  background:transparent;
-  border: none;
-  cursor: pointer;
-  margin: 0;
-  padding: 0;
-}
-
-
-@media (max-width: 720px) {
-  form{
-    width:80%;
-  }
-  
+footer {
+  margin-bottom: 0;
 }

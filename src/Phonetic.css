@@ -1,0 +1,17 @@
+.Phonetic{
+    background: white;
+    margin: 50px auto;
+    width: 60%;
+    height: 50px;
+    border-radius: 20px;
+    padding-top: 10px;
+}
+span{
+    margin-left: 20px;
+}
+.pointer{
+    cursor: pointer;
+}
+audio{
+    display: none;
+}

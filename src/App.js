@@ -1,60 +1,34 @@
-import { useState } from "react";
 import "./App.css";
 import sunIcon from "./sunIcon.svg";
 import moonIcon from "./moonIcon.svg";
-import magnifier from "./magnifier.svg";
-import axios from "axios";
+
+import Search from "./Search.js";
 function App() {
-  let [word, setWord] = useState("");
   function changeTheme() {
-    let body = document.querySelector(".App");
-    body.classList.toggle("dark");
+    document.querySelector(".App").classList.toggle("dark");
     document.querySelector(".moon-color").classList.toggle("hidden");
     document.querySelector(".sun-color").classList.toggle("hidden");
   }
-  function getResponse(response) {
-    console.log(response.data);
-  }
-  function getApi(event) {
-    event.preventDefault();
-    axios
-      .get(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
-      .then(getResponse);
-  }
-  function getWord(event) {
-    setWord(event.target.value);
-  }
   return (
     <div className="App">
-      <header className="">
-        <button class="change-theme" onClick={changeTheme}>
+      <header>
+        <button className="change-theme" onClick={changeTheme}>
           <img
             src={sunIcon}
             alt="light-mode"
             className="sun-color hidden"
-            title="Light theme"
+            title="Switch to light mode"
           />{" "}
           <img
             src={moonIcon}
             alt="light-mode"
             className="moon-color"
-            title="Dark theme"
+            title="Switch to dark mode"
           />
         </button>
       </header>
-      <div className="form-control">
-        <form onSubmit={getApi} className="text-center">
-          <input
-            type="search"
-            placeholder="Search a word"
-            onChange={getWord}
-            required
-          />
-          <button typ="submit" className="search-button">
-            <img src={magnifier} alt="search icon" width="35%" />
-          </button>
-        </form>
-      </div>
+      <Search  />
+      <footer className="text-center"> This is a project</footer>
     </div>
   );
 }
