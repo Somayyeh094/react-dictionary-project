@@ -1,6 +1,5 @@
 import "./Definition.css";
 
-
 export default function Definition({ data }) {
   if (data != null) {
     let definitions = data;
@@ -55,7 +54,6 @@ export default function Definition({ data }) {
             </div>
           );
         })}
-      
       </div>
     );
   } else {
