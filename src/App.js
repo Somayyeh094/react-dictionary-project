@@ -27,8 +27,23 @@ function App() {
           />
         </button>
       </header>
-      <Search  />
-      <footer className="text-center"> This is a project</footer>
+      <Search />
+      <footer className="text-center">
+        {" "}
+        This project was powered by SheCodes API and{" "}
+        <a href="https://dictionaryapi.dev/" target="_blank">
+          {" "}
+          Free Dictionary API
+        </a>
+        , and is{" "}
+        <a
+          href="https://github.com/Somayyeh094/react-dictionary-project"
+          target="_blank"
+        >
+          open-sourced
+        </a>{" "}
+        on GitHub
+      </footer>
     </div>
   );
 }
