@@ -31,7 +31,7 @@ function App() {
       <footer className="text-center">
         {" "}
         This project was powered by SheCodes API and{" "}
-        <a href="https://dictionaryapi.dev/" target="_blank">
+        <a href="https://dictionaryapi.dev/" target="_blank" rel="noreferrer">
           {" "}
           Free Dictionary API
         </a>
@@ -39,6 +39,7 @@ function App() {
         <a
           href="https://github.com/Somayyeh094/react-dictionary-project"
           target="_blank"
+          rel="noreferrer"
         >
           open-sourced
         </a>{" "}
