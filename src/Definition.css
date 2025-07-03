@@ -1,0 +1,20 @@
+
+.word-section{
+    background: white;
+    margin: 50px auto;
+    width: 60%;
+    border-radius: 20px;
+    padding: 10px 20px 10px 50px;
+}
+
+
+
+
+
+
+@media(max-width:960px){
+
+    .word-section{
+        padding: 10px 20px 10px 20px;
+    }
+}

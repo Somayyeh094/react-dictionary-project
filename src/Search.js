@@ -3,6 +3,7 @@ import Phonetic from "./Phonetic.js";
 import { useState } from "react";
 import magnifier from "./magnifier.svg";
 import "./Search.css";
+import Definition from "./Definition.js";
 
 export default function Search() {
   let [word, setWord] = useState("");
@@ -44,6 +45,7 @@ export default function Search() {
       </div>
       <div className="results">
         <Phonetic data={dicData} />
+        <Definition data={dicData} />
       </div>
     </div>
   );
