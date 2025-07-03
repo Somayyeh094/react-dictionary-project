@@ -1,20 +1,25 @@
-
-.word-section{
-    background:rgba(255, 255, 255, 0.9);
-    margin: 50px auto;
-    width: 60%;
-    border-radius: 20px;
-    padding: 10px 20px 10px 50px;
+.word-section {
+  background: rgba(255, 255, 255, 0.9);
+  margin: 50px auto;
+  width: 60%;
+  border-radius: 20px;
+  padding: 10px 20px 10px 50px;
+}
+.copy-btn {
+  float: right;
+  color: rgb(188, 187, 187);
+  background: transparent;
+  border: 1px solid rgb(188, 187, 187);
+  border-radius: 5px;
+  font-size: 14px;
+  right: 0;
+  padding: 5px 10px;
+  margin-right: 5px;
+  margin-top: 10px;
 }
 
-
-
-
-
-
-@media(max-width:960px){
-
-    .word-section{
-        padding: 10px 20px 10px 20px;
-    }
+@media (max-width: 960px) {
+  .word-section {
+    padding: 10px 20px 10px 20px;
+  }
 }
