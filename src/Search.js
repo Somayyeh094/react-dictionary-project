@@ -30,6 +30,7 @@ export default function Search() {
 
   return (
     <div className="Search">
+      <h1 className="label">What word do you want to look up?</h1>
       <div className="form-control">
         <form onSubmit={handleForm} className="text-center">
           <input

@@ -1,9 +1,14 @@
+
+.label{
+  text-align: center;
+}
+
 .form-control{
     display: flex;
     justify-content: center;
   }
   form {
-    margin-top: 20px;
+    margin-top: 10px;
     text-align: center;
     border: 2px solid gainsboro;
     border-radius: 50px;
@@ -38,5 +43,7 @@
     form{
       width:80%;
     }
-    
+    .label{
+      font-size: 20px;
+    }
   }  
