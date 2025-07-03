@@ -6,11 +6,12 @@ import "./Search.css";
 import Definition from "./Definition.js";
 
 export default function Search() {
-  let [word, setWord] = useState("");
+  let [word, setWord] = useState("hope");
   let [dicData, setDicData] = useState(null);
-
+  let [loaded, setLoaded] = useState(false);
   function getResponse(response) {
     setDicData(response.data);
+    setLoaded(true)
     console.log(dicData);
   }
 
@@ -27,7 +28,7 @@ export default function Search() {
   function getWord(event) {
     setWord(event.target.value);
   }
-
+if (loaded){
   return (
     <div className="Search">
       <h1 className="label">What word do you want to look up?</h1>
@@ -50,4 +51,8 @@ export default function Search() {
       </div>
     </div>
   );
+} else {
+  getApi()
+  return "Loading"
+}
 }

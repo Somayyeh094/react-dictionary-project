@@ -16,6 +16,10 @@
   padding: 5px 10px;
   margin-right: 5px;
   margin-top: 10px;
+  cursor: pointer;
+}
+.copy-btn:hover{
+  box-shadow: 2px 2px 2px gainsboro;
 }
 
 @media (max-width: 960px) {

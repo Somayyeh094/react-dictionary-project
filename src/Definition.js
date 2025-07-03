@@ -1,12 +1,13 @@
 import "./Definition.css";
 
+
 export default function Definition({ data }) {
   if (data != null) {
     let definitions = data;
     function copyText() {
       let section = document.getElementById("section");
       navigator.clipboard.writeText(section.innerText);
-      alert("Quotes copied!");
+      alert("copied!");
     }
     return (
       <div className="Definition">
@@ -32,7 +33,7 @@ export default function Definition({ data }) {
                               </p>
 
                               <p>
-                                <em>Example</em> : <em>{word.example}</em>
+                                <em>Example : {word.example}</em>
                               </p>
                             </div>
                           );
@@ -54,6 +55,7 @@ export default function Definition({ data }) {
             </div>
           );
         })}
+      
       </div>
     );
   } else {
