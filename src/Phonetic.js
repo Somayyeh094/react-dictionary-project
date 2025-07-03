@@ -11,20 +11,29 @@ export default function Phonetic({ data }) {
       <div className="Phonetic">
         <h1>{data[0].word.charAt(0).toUpperCase() + data[0].word.slice(1)}</h1>
         {phonetics.map(function (phonetic, index) {
-          return (
-            <span key={index}>
-              {" "}
-              <img
-                src={audioIcon}
-                width={"30px"}
-                onClick={playAudio}
-                className="pointer"
-                alt="audio"
-              />
-              <audio src={phonetic.audio} id="myAudio" controls></audio>{" "}
-              {phonetic.text}
-            </span>
-          );
+          if (phonetic.audio !== "") {
+            return (
+              <span key={index}>
+                {" "}
+                <img
+                  src={audioIcon}
+                  width={"30px"}
+                  onClick={playAudio}
+                  className="pointer"
+                  alt="audio"
+                />
+                <audio src={phonetic.audio} id="myAudio" controls></audio>{" "}
+                {phonetic.text}
+              </span>
+            );
+          } else {
+            return (
+              <span key={index}>
+                {phonetic.text}
+              </span>
+            );
+            
+          }
         })}
       </div>
     );
