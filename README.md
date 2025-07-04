@@ -19,7 +19,8 @@ A feature-rich dictionary web app built with React, offering definitions, phonet
 - **Synonyms/Antonyms**: Expand your vocabulary.  
 - **Visual Context**: Integrated Pexels image search.  
 - **Dark/Light Mode**: Toggle for user preference.  
-- **Responsive Design**: Mobile-friendly interface.  
+- **Responsive Design**: Mobile-friendly interface.
+- **Copy text feature** 
 
 ## Tech Stack 🛠️ 
 - **Frontend**: React (Hooks, Context API for theme management)  
