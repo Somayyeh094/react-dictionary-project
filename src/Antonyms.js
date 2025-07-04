@@ -1,10 +1,8 @@
-
 import "./Synonyms.css";
 
 export default function Antonyms({ data }) {
   if (data.antonyms.length > 0) {
     let antonyms = data.antonyms;
-    console.log(antonyms);
     return (
       <div className="Antonyms">
         <strong>Antonyms</strong>:
