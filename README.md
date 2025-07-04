@@ -2,9 +2,16 @@
   
 [![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://react-dictionary-somayyeh.netlify.app/)  
 
-A feature-rich dictionary web app built with React, offering definitions, phonetics, synonyms, and images—with a **dark mode toggle** for eye-friendly browsing.  
+A feature-rich dictionary web app built with React, offering definitions, phonetics, synonyms, and images—with a **dark mode toggle** for eye-friendly browsing.
+
+  
+
+<figure><img src="https://github.com/user-attachments/assets/c59ba0a5-6e3c-4124-9ff6-4fce12a8e83d" width="300" height="300"><figcaption>Light mode </figcaption></figure>
 
 
+
+
+<figure><img src="https://github.com/user-attachments/assets/768446f1-b849-4a39-b068-63a95c75dcb9" width="300" height="300"><figcaption>Dark mode </figcaption></figure>
 
 ##  Features  ✨
 - **Word Definitions**: Meanings, parts of speech, and usage examples.  
