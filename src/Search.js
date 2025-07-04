@@ -4,6 +4,7 @@ import { useState } from "react";
 import magnifier from "./magnifier.svg";
 import "./Search.css";
 import Definition from "./Definition.js";
+import { BeatLoader } from "react-spinners";
 
 export default function Search() {
   let [word, setWord] = useState("hope");
@@ -53,6 +54,18 @@ if (loaded){
   );
 } else {
   getApi()
-  return "Loading"
+  return (
+    <div className="loading-first">
+      <BeatLoader
+        color="silver"
+        loading="true"
+        cssOverride=""
+        size={30}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      />
+      <p>Please wait...</p>
+    </div>
+  );
 }
 }

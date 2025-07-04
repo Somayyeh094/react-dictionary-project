@@ -39,6 +39,10 @@
     margin: 0;
     padding: 0;
   }
+  .loading-first{
+    margin: 0 auto;
+    text-align: center;
+  }
   @media (max-width: 720px) {
     form{
       width:80%;
