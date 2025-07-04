@@ -9,7 +9,7 @@ export default function Phonetic({ data }) {
 
     return (
       <div className="Phonetic">
-        <h1>{data[0].word.charAt(0).toUpperCase() + data[0].word.slice(1)}</h1>
+        <h2>{data[0].word.charAt(0).toUpperCase() + data[0].word.slice(1)}</h2>
         {phonetics.map(function (phonetic, index) {
           if (phonetic.audio !== "") {
             return (

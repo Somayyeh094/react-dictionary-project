@@ -26,7 +26,7 @@ export default function Definition({ data }) {
                       Copy
                     </button>
                     <div id="section">
-                      <h2>{defineword.partOfSpeech}</h2>
+                      <h3>{defineword.partOfSpeech}</h3>
                       {defineword.definitions.map(function (word, index) {
                         if (word.hasOwnProperty("example")) {
                           return (

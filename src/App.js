@@ -1,7 +1,7 @@
 import "./App.css";
 import sunIcon from "./sunIcon.svg";
 import moonIcon from "./moonIcon.svg";
-
+import "bootstrap/dist/css/bootstrap.css";
 import Search from "./Search.js";
 function App() {
   function changeTheme() {

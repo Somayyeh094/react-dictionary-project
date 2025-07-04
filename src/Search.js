@@ -10,14 +10,30 @@ export default function Search() {
   let [word, setWord] = useState("hope");
   let [dicData, setDicData] = useState(null);
   let [loaded, setLoaded] = useState(false);
+  let [photos, setPhotos] = useState(null);
+
   function getResponse(response) {
     setDicData(response.data);
-    setLoaded(true)
+    setLoaded(true);
     console.log(dicData);
+
+    let photoApiKey =
+      "puo43omyT4W3x3YUXWnFtDoxCDETPSNmntMUnFOGaQ19O2ymRKS1Sxrq";
+    let photoUrl = `https://api.pexels.com/v1/search?query=${response.data.word}&per_page=10`;
+    axios
+      .get(photoUrl, {
+        headers: {
+          Authorization: `Bearer ${photoApiKey}`,
+        },
+      })
+      .then(getPhotoResponse);
+  }
+  function getPhotoResponse(response) {
+    setPhotos(response.data);
+    console.log(photos);
   }
 
   function getApi() {
-    console.log(word);
     axios
       .get(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
       .then(getResponse);
@@ -29,12 +45,12 @@ export default function Search() {
   function getWord(event) {
     setWord(event.target.value);
   }
-if (loaded){
-  return (
-    <div className="Search">
-      <h1 className="label">What word do you want to look up?</h1>
-      <div className="form-control">
-        <form onSubmit={handleForm} className="text-center">
+  if (loaded) {
+    return (
+      <div className="Search">
+        <h2 className="label">What word do you want to look up?</h2>
+
+        <form onSubmit={handleForm}>
           <input
             type="search"
             placeholder="Search a word"
@@ -45,27 +61,27 @@ if (loaded){
             <img src={magnifier} alt="search icon" width="35%" />
           </button>
         </form>
+
+        <div className="results">
+          <Phonetic data={dicData} />
+          <Definition data={dicData} />
+        </div>
       </div>
-      <div className="results">
-        <Phonetic data={dicData} />
-        <Definition data={dicData} />
+    );
+  } else {
+    getApi();
+    return (
+      <div className="loading-first">
+        <BeatLoader
+          color="silver"
+          loading="true"
+          cssOverride=""
+          size={30}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+        />
+        <p>Please wait...</p>
       </div>
-    </div>
-  );
-} else {
-  getApi()
-  return (
-    <div className="loading-first">
-      <BeatLoader
-        color="silver"
-        loading="true"
-        cssOverride=""
-        size={30}
-        aria-label="Loading Spinner"
-        data-testid="loader"
-      />
-      <p>Please wait...</p>
-    </div>
-  );
-}
+    );
+  }
 }

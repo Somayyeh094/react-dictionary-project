@@ -10,9 +10,11 @@ export default function Synonyms({ data }) {
         <strong>Synonyms</strong>:
         {synonyms.map(function (synonym, index) {
           return (
+            <span key={index}>
+             
+                {index + 1}-{synonym}
            
-              <span key={index}>{ index+1}-{synonym}</span>
-           
+            </span>
           );
         })}
       </div>
