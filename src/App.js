@@ -30,7 +30,12 @@ function App() {
       <Search />
       <footer className="text-center">
         {" "}
-        This project was powered by SheCodes API and{" "}
+        This project was powered by{" "}
+        <a href="https://www.pexels.com/api/" target="_blank" rel="noreferrer">
+          {" "}
+          Pexels API
+        </a>{" "}
+        and{" "}
         <a href="https://dictionaryapi.dev/" target="_blank" rel="noreferrer">
           {" "}
           Free Dictionary API
