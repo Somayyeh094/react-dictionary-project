@@ -25,5 +25,6 @@
 @media (max-width: 960px) {
   .word-section {
     padding: 10px 20px 10px 20px;
+    width: 80%;
   }
 }

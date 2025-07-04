@@ -14,3 +14,8 @@ span{
 audio{
     display: none;
 }
+@media (max-width: 960px) {
+    .Phonetic {
+      width: 80%;
+    }
+  }

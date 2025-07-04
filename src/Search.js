@@ -48,7 +48,7 @@ export default function Search() {
   if (loaded) {
     return (
       <div className="Search">
-        <h2 className="label">What word do you want to look up?</h2>
+        <h2 className="label text-center mt-3">What word do you want to look up?</h2>
 
         <form onSubmit={handleForm}>
           <input
