@@ -16,6 +16,7 @@ export default function Search() {
     setDicData(response.data);
     setLoaded(true);
     console.log(dicData);
+    
     let photoApiKey =
       "puo43omyT4W3x3YUXWnFtDoxCDETPSNmntMUnFOGaQ19O2ymRKS1Sxrq";
     let photoUrl = `https://api.pexels.com/v1/search?query=${word}&per_page=10`;
