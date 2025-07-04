@@ -1,7 +1,6 @@
 import "./Definition.css";
-import Synonyms from "./Synonyms"
+import Synonyms from "./Synonyms";
 import Antonyms from "./Antonyms";
-
 
 export default function Definition({ data }) {
   if (data != null) {
@@ -18,7 +17,7 @@ export default function Definition({ data }) {
             <div key={index}>
               {define.meanings.map(function (defineword, index) {
                 return (
-                  <div className="word-section" id="section" key={index}>
+                  <div className="word-section" key={index}>
                     <button
                       className="copy-btn"
                       id="copy-btn"
@@ -26,9 +25,8 @@ export default function Definition({ data }) {
                     >
                       Copy
                     </button>
-                    <br />
-                    <h2>{defineword.partOfSpeech}</h2>
-                    <div>
+                    <div id="section">
+                      <h2>{defineword.partOfSpeech}</h2>
                       {defineword.definitions.map(function (word, index) {
                         if (word.hasOwnProperty("example")) {
                           return (
