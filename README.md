@@ -5,6 +5,7 @@
 A feature-rich dictionary web app built with React, offering definitions, phonetics, synonyms, and images—with a **dark mode toggle** for eye-friendly browsing.  
 
 
+
 ##  Features  ✨
 - **Word Definitions**: Meanings, parts of speech, and usage examples.  
 - **Phonetics**: Audio pronunciation playback.  
