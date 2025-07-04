@@ -5,9 +5,10 @@ import magnifier from "./magnifier.svg";
 import "./Search.css";
 import Definition from "./Definition.js";
 import { BeatLoader } from "react-spinners";
+import Photos from "./Photos.js"
 
 export default function Search() {
-  let [word, setWord] = useState("hope");
+  let [word, setWord] = useState("rain");
   let [dicData, setDicData] = useState(null);
   let [loaded, setLoaded] = useState(false);
   let [photos, setPhotos] = useState(null);
@@ -16,14 +17,14 @@ export default function Search() {
     setDicData(response.data);
     setLoaded(true);
     console.log(dicData);
-    
+
     let photoApiKey =
       "puo43omyT4W3x3YUXWnFtDoxCDETPSNmntMUnFOGaQ19O2ymRKS1Sxrq";
-    let photoUrl = `https://api.pexels.com/v1/search?query=${word}&per_page=10`;
+    let photoUrl = `https://api.pexels.com/v1/search?query=${word}&per_page=9`;
     axios
       .get(photoUrl, {
         headers: {
-          Authorization: `Bearer ${photoApiKey}`,
+          Authorization: `${photoApiKey}`,
         },
       })
       .then(getPhotoResponse);
@@ -40,28 +41,26 @@ export default function Search() {
       console.log(error.response.data);
       console.log(error.response.status);
       console.log(error.response.headers);
-      alert("Please type the word correctly!");
+      alert(`No Definitions Found for "${(word)}"`);
     } else if (error.request) {
       // The request was made but no response was received
       // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
       // http.ClientRequest in node.js
-      alert("Please try it later...")
+      alert("Please try it later...");
       console.log(error.request);
     } else {
       // Something happened in setting up the request that triggered an Error
       console.log("Error", error.message);
-      alert("Please try again!")
+      alert("Please try again!");
     }
     console.log(error.config);
-  
-}
-
+  }
 
   function getApi() {
     axios
       .get(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
-      .then(getResponse).catch((errors))
-      
+      .then(getResponse)
+      .catch(errors);
   }
   function handleForm(event) {
     event.preventDefault();
@@ -73,7 +72,9 @@ export default function Search() {
   if (loaded) {
     return (
       <div className="Search">
-        <h2 className="label text-center mt-3">What word do you want to look up?</h2>
+        <h2 className="label text-center mt-3">
+          What word do you want to look up?
+        </h2>
 
         <form onSubmit={handleForm}>
           <input
@@ -90,6 +91,7 @@ export default function Search() {
         <div className="results">
           <Phonetic data={dicData} />
           <Definition data={dicData} />
+          <Photos data={photos} />
         </div>
       </div>
     );
